@@ -1,50 +1,93 @@
-# React + TypeScript + Vite
+# 🚀 React + TypeScript + Vite + MultiStep Form 🧑‍💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project provides a minimal setup to get started with React and TypeScript
+using Vite. It also integrates multi-step form creation with `react-hook-form`
+to simplify validation and management of complex forms.
 
-Currently, two official plugins are available:
+## 📦 Packages Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: A superset of JavaScript that adds static typing.
+- **Vite**: A fast and optimized build tool for modern frontend development.
+- **React Hook Form**: Utility for easy and performant form management.
+- **Zod**: A TypeScript-first schema declaration and validation library.
+- **TailwindCSS**: A utility-first CSS framework for rapid UI development.
+- **ESLint**: A tool for identifying and fixing code issues.
+- **Prettier Plugin TailwindCSS**: Plugin to ensure consistent Tailwind class
+  organization.
 
-## Expanding the ESLint configuration
+## 🛠️ Available Scripts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+In the project directory, you can run:
 
-- Configure the top-level `parserOptions` property like this:
+### `npm run dev`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Runs the app in development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### `npm run build`
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Builds the app for production to the `dist` folder.\
+The build is minified and optimized for the best performance.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### `npm run lint`
+
+Runs ESLint to identify and fix code issues.
+
+### `npm run preview`
+
+Locally previews the production build.
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/your-username/reactjs-multistepform-reacthookform.git
+   cd reactjs-multistepform-reacthookform
+   ```
+
+2. **Install the dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the project:**
+
+   ```bash
+   npm run dev
+   ```
+
+## 🧩 ESLint Configuration
+
+If you want to expand the ESLint configuration to enable type-aware linting
+rules, here is an example:
+
+    ```js
+    export default tseslint.config({
+      languageOptions: {
+        parserOptions: {
+          project: ['./tsconfig.node.json', './tsconfig.app.json'],
+          tsconfigRootDir: import.meta.dirname,
+        },
+      },
+      plugins: {
+        react,
+      },
+      rules: {
+        ...react.configs.recommended.rules,
+        ...react.configs['jsx-runtime'].rules,
+      },
+    })
+    ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues and pull requests for
+improvements and fixes.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.
