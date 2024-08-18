@@ -1,6 +1,6 @@
-import { useCustomFormContext } from '../components/context'
-import { FormInput } from '../components/form-input'
-import { FormSelect } from '../components/form-select'
+import { FormInput } from '../../form-input'
+import { FormSelect } from '../../form-select'
+import { useCustomFormContext } from '../context'
 
 export default function Step2() {
   const { register, errors } = useCustomFormContext()

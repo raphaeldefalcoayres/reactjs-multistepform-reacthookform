@@ -1,4 +1,4 @@
-import { useCustomFormContext } from './context'
+import { useCustomFormContext } from '../context'
 import { Step } from './step'
 
 export function Stepper() {
