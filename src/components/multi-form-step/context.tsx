@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { createContext, useContext, useState } from 'react'
 import { SubmitHandler, useForm, UseFormRegister } from 'react-hook-form'
 import { z } from 'zod'
-import { FormDataSchema } from '../schema'
+import { FormDataSchema } from './schema'
 
 type Inputs = z.infer<typeof FormDataSchema>
 

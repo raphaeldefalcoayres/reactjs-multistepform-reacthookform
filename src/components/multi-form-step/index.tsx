@@ -1,7 +1,7 @@
 import { Suspense, lazy } from 'react'
-import { CustomFormProvider, useCustomFormContext } from './components/context'
 import Navigation from './components/navigation'
 import { Stepper } from './components/stepper'
+import { CustomFormProvider, useCustomFormContext } from './context'
 
 const Step1 = lazy(() => import('./steps/step1'))
 const Step2 = lazy(() => import('./steps/step2'))

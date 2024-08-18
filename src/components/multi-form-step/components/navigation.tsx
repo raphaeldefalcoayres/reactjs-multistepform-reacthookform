@@ -1,4 +1,4 @@
-import { useCustomFormContext } from './context'
+import { useCustomFormContext } from '../context'
 
 export default function Navigation() {
   const { currentStep, goToNextStep, goToPreviousStep, steps } =
