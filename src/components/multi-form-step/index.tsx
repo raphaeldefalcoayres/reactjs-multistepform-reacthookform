@@ -10,13 +10,11 @@ const Step3 = lazy(() => import('./steps/step3'))
 function Steps() {
   const { currentStep } = useCustomFormContext()
 
-  return (
-    <>
-      {currentStep === 0 && <Step1 />}
-      {currentStep === 1 && <Step2 />}
-      {currentStep === 2 && <Step3 />}
-    </>
-  )
+  const availableSteps = [<Step1 />, <Step2 />, <Step3 />]
+
+  if (currentStep >= availableSteps.length) return null;
+
+  return availableSteps[currentStep]
 }
 
 export default function MultiStepForm() {
